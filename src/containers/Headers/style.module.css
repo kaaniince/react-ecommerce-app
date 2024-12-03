@@ -1,0 +1,102 @@
+/* Header Sabit Kalacak */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+/* Sol, ortada ve sağda hizalanmış alanlar */
+.left,
+.center,
+.right {
+  display: flex;
+  align-items: center;
+}
+
+.left {
+  flex: 1;
+  justify-content: flex-start;
+}
+
+.center {
+  flex: 2;
+  justify-content: center;
+}
+
+.right {
+  flex: 1;
+  justify-content: flex-end;
+}
+
+/* İkonlar */
+.icon {
+  font-size: 24px;
+  color: white;
+}
+
+/* Refresh butonu */
+.refreshButton {
+  display: flex;
+  align-items: center;
+  background-color: #212121;
+  color: white;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.refreshButton:hover {
+  background-color: #8d8a8a;
+}
+
+/* Arama kutusu */
+.searchBox {
+  display: flex;
+  align-items: center;
+  background-color: #f4f4f4;
+  padding: 5px 10px;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 300px;
+}
+
+.searchBox .icon {
+  font-size: 20px;
+  color: #888;
+  margin-right: 10px;
+}
+
+.searchInput {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  font-size: 16px;
+  width: 100%;
+  color: #333;
+}
+
+.searchInput::placeholder {
+  color: #aaa;
+}
+
+@media (max-width: 768px) {
+  .header {
+    position: relative;
+    box-shadow: none;
+  }
+
+  body {
+    margin-top: 0;
+  }
+}

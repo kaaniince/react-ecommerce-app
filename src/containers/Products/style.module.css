@@ -1,0 +1,249 @@
+/* style.module.css */
+.productCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  margin: 16px;
+  text-align: center;
+}
+
+.productCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.productCard img {
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+  border-radius: 4px;
+  margin-bottom: 16px;
+}
+
+.productCard .productInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.productCard p {
+  margin: 8px 0;
+  font-size: 16px;
+  color: #333333;
+}
+
+.productCard p:nth-child(2) {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.productCard p:nth-child(3) {
+  color: #212121;
+  font-weight: bold;
+}
+
+.productCard .buttonContainer {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  gap: 8px;
+}
+
+.productCard button {
+  background-color: #f44336;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 12px;
+  cursor: pointer;
+  font-size: 14px;
+  width: 48%;
+}
+
+.productCard button:hover {
+  background-color: #d32f2f;
+}
+
+.productCard button:last-child {
+  background-color: #2196f3;
+}
+
+.productCard button:last-child:hover {
+  background-color: #1976d2;
+}
+
+/* style.module.css */
+/* Product Detail Container */ /* Product Detail Container */
+.productDetail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 15px;
+  background-color: #ffffff;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  text-align: center;
+}
+
+/* Back Link Button */
+.backLink {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.backLinkButton {
+  display: inline-flex;
+  align-items: center;
+  background-color: #212121;
+  color: #fff;
+  padding: 8px 12px;
+  font-size: 14px;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.backLinkButton:hover {
+  background-color: #6d6c6c;
+  color: white;
+}
+
+.backLinkButton i {
+  margin-right: 8px;
+}
+
+/* Product Image */
+.productImageContainer {
+  margin-top: 15px;
+  width: 100%;
+  max-width: 400px;
+}
+
+.productImage {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Product Info */
+.productInfo {
+  margin-top: 15px;
+  text-align: center;
+}
+
+.productTitle {
+  font-size: 22px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.productDescription {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.productPrice {
+  font-size: 18px;
+  color: #212121;
+  font-weight: bold;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .productDetail {
+    padding: 15px;
+    margin: 10px;
+    max-width: 100%;
+  }
+
+  .productTitle {
+    font-size: 20px;
+  }
+
+  .productPrice {
+    font-size: 16px;
+  }
+
+  .backLinkButton {
+    font-size: 12px;
+    padding: 8px 12px;
+  }
+
+  .productImageContainer {
+    max-width: 100%;
+  }
+}
+
+/* style.module.css */
+
+.productContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+
+  height: 100%;
+}
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+  .productCard {
+    width: 100%;
+    margin: 10px;
+    max-width: 90%;
+  }
+
+  .productCard img {
+    height: 180px;
+  }
+
+  .productCard button {
+    width: 48%;
+    font-size: 12px;
+  }
+
+  .productCard p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .productCard {
+    width: 100%;
+    margin: 8px;
+    max-width: 100%;
+  }
+
+  .productCard img {
+    height: 160px;
+  }
+
+  .productCard button {
+    width: 100%;
+    margin-bottom: 8px;
+  }
+
+  .productCard p {
+    font-size: 12px;
+  }
+}

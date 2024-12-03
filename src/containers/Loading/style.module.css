@@ -1,0 +1,53 @@
+.loading {
+  font-size: 24px;
+  font-weight: bold;
+  color: #212121; /* Yeşil renk, taze ve dikkat çekici */
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Sayfa yüksekliği kadar */
+  flex-direction: column;
+  animation: loadingAnim 1.5s infinite ease-in-out;
+  letter-spacing: 2px; /* Harfler arasında boşluk */
+}
+
+/* Animasyon için */
+@keyframes loadingAnim {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+}
+
+/* İkon için, loading metninin yanına dönen bir animasyon eklemek */
+.loading::after {
+  content: "..."; /* Ellipsis üç nokta ekler */
+  margin-left: 10px;
+  font-size: 32px;
+  color: #212121;
+  animation: dotAnim 1s steps(3, end) infinite;
+}
+
+@keyframes dotAnim {
+  0% {
+    content: ".";
+  }
+  33% {
+    content: "..";
+  }
+  66% {
+    content: "...";
+  }
+  100% {
+    content: ".";
+  }
+}
